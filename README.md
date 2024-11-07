@@ -1,27 +1,45 @@
-# AngularDocs
+# 📚 My Angular Docs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+Benvenuto in **My Angular Docs**, un progetto sviluppato con Angular 17 per esplorare e comprendere i concetti fondamentali di Angular attraverso esempi pratici e codice integrato.
 
-## Development server
+## 🧑‍💻 Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Framework**: Angular 17  
+- **Linguaggio**: TypeScript  
+- **Routing**: Angular Router  
+- **Stili**: SCSS  
+- **Build Tool**: Angular CLI  
 
-## Code scaffolding
+## 🎯 Obiettivi del Progetto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Questo progetto nasce per:
 
-## Build
+- **Approfondire Angular**: Ogni pagina copre un concetto chiave di Angular (es. Change Detection, Dependency Injection).  
+- **Imparare con il codice**: Ogni concetto è illustrato con un esempio pratico direttamente utilizzabile.  
+- **Documentazione ridotta**: Un punto di riferimento veloce e mirato per chi vuole rinfrescare o approfondire le proprie conoscenze.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Funzionalità
 
-## Running unit tests
+- **Navigazione semplice**: Il sito è strutturato con un router che consente di accedere rapidamente ai vari argomenti.  
+- **Esempi pratici**: Ogni pagina mostra un concetto di Angular con codice reale.  
+- **Design modulare**: Nuovi concetti e pagine possono essere aggiunti facilmente.  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🖥️ Come Eseguire il Progetto
 
-## Running end-to-end tests
+1. Clona il repository:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ``` git clone https://github.com/tuo-username/my-angular-docs.git ```
 
-## Further help
+2. Naviga nella cartella del progetto:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ``` cd my-angular-docs ```
+
+3. Installa le dipendenze:
+
+   ``` npm install ```
+
+4. Avvia l'applicazione:
+
+   ``` npm install ```
+
+5. Apri il browser e visita http://localhost:4200.
