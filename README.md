@@ -7,7 +7,7 @@ Benvenuto in **My Angular Docs**, un progetto sviluppato con Angular 17 per espl
 - **Framework**: Angular 17  
 - **Linguaggio**: TypeScript  
 - **Routing**: Angular Router  
-- **Stili**: SCSS  
+- **Stili**: Tailwind & DaisyUI  
 - **Build Tool**: Angular CLI  
 
 ## 🎯 Obiettivi del Progetto

@@ -11,6 +11,7 @@ import { TestingComponent } from './features/testing/testing.component';
 import { PerformanceComponent } from './features/performance/performance.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/data-binding', pathMatch: 'full' },
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'change-detection', component: ChangeDetectionComponent },
   {
@@ -24,5 +25,4 @@ export const routes: Routes = [
   { path: 'forms', component: FormsComponent },
   { path: 'testing', component: TestingComponent },
   { path: 'performance', component: PerformanceComponent },
-  { path: '', redirectTo: '/data-binding', pathMatch: 'full' }
 ];
