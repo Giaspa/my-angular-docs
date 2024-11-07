@@ -1,13 +1,22 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>My Angular Docs</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    if (window.location.pathname.indexOf('/my-angular-docs/my-angular-docs') === 0) {
+      window.location.href = window.location.href.replace('/my-angular-docs/my-angular-docs', '/my-angular-docs');
+    }
+  </script>
+
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>
