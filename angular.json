@@ -49,7 +49,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/my-angular-docs/"
+              "baseHref": ""
             },
             "development": {
               "optimization": false,
