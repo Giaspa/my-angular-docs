@@ -1,0 +1,24 @@
+/*
+
+nav{
+  display:flex;
+  align-items: end;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: lightgray;
+  height: 1.75rem;
+
+  & > a{
+    min-height: 1.75rem;
+    text-decoration: underline;
+    transition: all 0.5s;
+
+    &:hover{
+      cursor: pointer;
+      color: red;
+      font-weight: 800;
+      font-size: 1.05rem;
+      transition: all 0.5s;
+    }
+  }
+} */

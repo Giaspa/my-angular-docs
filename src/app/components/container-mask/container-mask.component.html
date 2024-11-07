@@ -1,0 +1,36 @@
+<div class="mockup-window bg-base-300 border">
+  <div class="bg-base-200 flex  flex-col gap-8 justify-left px-4 py-16">
+    <div class="text-3xl font-bold">
+      <ng-content select="h1"></ng-content>
+    </div>
+
+    <article class="flex w-full">
+      <div class="divider divider-horizontal"></div>
+      <div><ng-content select="[description]"></ng-content></div>
+    </article>
+
+    <article>
+      <div class="divider divider-start">
+        <h2 class="text-2xl font-semibold">
+          Esempio di codice
+        </h2>
+      </div>
+
+      <div class="mockup-code">
+        <pre>
+          <ng-content select="code"></ng-content>
+          </pre>
+      </div>
+    </article>
+
+    <article>
+      <div class="divider divider-start">
+        <h2 class="text-2xl font-semibold">
+          Test
+        </h2>
+      </div>
+
+      <ng-content></ng-content>
+    </article>
+  </div>
+</div>

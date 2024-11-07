@@ -1,0 +1,54 @@
+<app-container-mask>
+  <h1>Ottimizzazione delle Performance in Angular</h1>
+
+  <div description>La <strong class="text-secondary">Performance Optimization </strong> in Angular comprende varie
+    tecniche per migliorare la velocità e la reattività dell’applicazione. Tra le principali strategie ci sono:
+
+    <ul class="list-disc ml-4">
+      <li><strong class="text-primary">Lazy Loading</strong>: carica i moduli solo quando sono necessari, riducendo i
+        tempi di caricamento iniziali.
+
+      </li>
+
+      <li><strong class="text-primary">Change Detection Strategy</strong>: ottimizza il rilevamento dei cambiamenti con
+        ChangeDetectionStrategy.OnPush, che limita la Change Detection ai cambiamenti negli input del componente.
+      </li>
+
+      <li><strong class="text-primary">Pipes Pure</strong>: i pipe puri vengono eseguiti solo quando cambiano i dati di
+        input, evitando calcoli inutili.
+      </li>
+
+      <li><strong class="text-primary">AOT Compilation</strong>: la Ahead-of-Time Compilation (AOT) trasforma il codice
+        Angular in JavaScript ottimizzato durante la build, migliorando le performance di runtime.
+      </li>
+    </ul>
+  </div>
+
+  <code>{{codeExample}}</code>
+
+  <div class="flex flex-col gap-4">
+    <p>Questo esempio dimostra l'uso di lazy loading, Change Detection OnPush, e una pipe pura.</p>
+
+    <button class="btn btn-outline btn-primary" (click)="increment()">Incrementa</button>
+
+    <div class="flex w-full flex-col lg:flex-row gap-8">
+      <div class="flex-1">
+        <app-container-mask-mini>
+          <h2>Change Detection con OnPush</h2>
+          <p>Contatore: {{ counter }}</p>
+        </app-container-mask-mini>
+      </div>
+
+      <div class="divider lg:divider-horizontal">OR</div>
+
+      <div class="flex-1">
+        <app-container-mask-mini>
+          <h2>Pipe Pura</h2>
+          <p>Valore raddoppiato: {{ counter | double }}</p>
+        </app-container-mask-mini>
+      </div>
+    </div>
+  </div>
+
+
+</app-container-mask>

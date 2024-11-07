@@ -1,0 +1,43 @@
+<app-container-mask>
+  <h1>Routing in Angular</h1>
+
+  <div description>Il <strong class="text-secondary">Routing </strong> in Angular permette la navigazione tra pagine o
+    componenti della tua applicazione. Angular Router mappa le rotte URL ai componenti, consentendo all'app di caricare
+    e visualizzare contenuti diversi in risposta ai cambiamenti dell'URL. Alcuni concetti chiave del routing in Angular
+    includono:
+
+
+    <ul class="list-disc ml-4">
+      <li><strong class="text-primary">Routes</strong>: definite in un array che associa percorsi URL a componenti
+        specifici.
+      </li>
+
+      <li><strong class="text-primary">RouterOutlet</strong>: un placeholder nel template in cui il contenuto della
+        rotta selezionata verrà caricato.
+      </li>
+
+      <li><strong class="text-primary">RouterLink</strong>: una direttiva per navigare tra le rotte.
+      </li>
+
+      <li><strong class="text-primary">Route Guard</strong>: protezioni che controllano l’accesso a determinate rotte.
+      </li>
+
+      <li><strong class="text-primary">Lazy Loading</strong>: carica i moduli su richiesta per migliorare le
+        performance.
+      </li>
+    </ul>
+  </div>
+
+  <code>{{codeExample}}</code>
+
+  <div class="flex flex-col gap-4">
+    <p>Questo esempio dimostra come utilizzare il routing con sub-routes in Angular.</p>
+
+    <div role="tablist" class="tabs tabs-bordered">
+      <a role="tab" class="tab" routerLink="route1" routerLinkActive="tab-active">Route 1</a>
+      <a role="tab" class="tab" routerLink="route2" routerLinkActive="tab-active">Route 2</a>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
+</app-container-mask>

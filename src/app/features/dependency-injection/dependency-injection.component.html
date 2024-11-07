@@ -1,0 +1,48 @@
+<app-container-mask>
+  <h1>Dependency Injection Avanzata</h1>
+
+  <div description>La <strong class="text-secondary">Dependency Injection (DI) </strong> è un pattern di progettazione
+    in Angular che consente di iniettare servizi e altre dipendenze direttamente nei componenti, riducendo
+    l'accoppiamento e migliorando la testabilità del codice. Angular fornisce un meccanismo di DI integrato che gestisce
+    automaticamente la creazione e l’iniezione di istanze di servizi in componenti e altre classi. I principali elementi
+    della Dependency Injection in Angular includono:
+
+    <ul class="list-disc ml-4">
+      <li><strong class="text-primary">Servizi</strong>: classi che contengono la logica dell'applicazione,
+        riutilizzabile e condivisa tra più componenti.
+      </li>
+
+      <li><strong class="text-primary">Injectable</strong>: un decoratore che permette di rendere una classe
+        iniettabile.
+      </li>
+
+      <li><strong class="text-primary">Providers</strong>: dichiarazioni che indicano al sistema DI come creare
+        un'istanza di un servizio, definite nei moduli o nei componenti.
+        <ul class="list-decimal ml-8">
+          <li><strong class="text-accent">InjectionToken</strong>: Un oggetto che Angular usa per identificare un valore specifico o un servizio che verrà iniettato. È utile per registrare valori che non sono classi e per situazioni in cui non abbiamo un tipo specifico, come per configurazioni o valori dinamici.
+          </li>
+          <li><strong class="text-accent">useValue</strong>: L'opzione useValue viene usata per assegnare un valore statico a un InjectionToken.
+          </li>
+          <li><strong class="text-accent">useFactory</strong>: Permette di generare un valore dinamico che cambia ogni volta che viene chiamato.
+          </li>
+          <li><strong class="text-accent">useExisting</strong>:  E' sato per fare in modo che un token punti a un servizio o a un’istanza già esistente.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <code>{{codeExample}}</code>
+
+  <div class="flex flex-col gap-4">
+    <p>Questo esempio dimostra l'uso di Injection Tokens avanzati con Angular.</p>
+
+    <p>Dati dal primo servizio: <strong class="bg-black text-white p-1">{{ dataFromFirstService }}</strong></p>
+    <p>Dati dal secondo servizio: <strong class="bg-black text-white p-1">{{ dataFromSecondService }}</strong></p>
+    <p>Configurazione ricevuta dal token CONFIG_TOKEN: <strong class="bg-black text-white p-1">{{ config }}</strong></p>
+    <p>Valore dinamico generato da DYNAMIC_CONFIG_TOKEN: <strong class="bg-black text-white p-1">{{ dynamicConfig
+        }}</strong></p>
+    <p>Servizio condiviso tramite SHARED_SERVICE_TOKEN: <strong class="bg-black text-white p-1">{{ sharedServiceData
+        }}</strong></p>
+  </div>
+</app-container-mask>

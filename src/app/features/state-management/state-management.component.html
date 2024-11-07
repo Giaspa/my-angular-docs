@@ -1,0 +1,55 @@
+<app-container-mask>
+  <h1>State Management in Angular</h1>
+
+  <div description>Lo <strong class="text-secondary">State Management </strong> in Angular si riferisce alla gestione e
+    condivisione dei dati tra i vari componenti dell’applicazione. Angular offre strumenti come RxJS e librerie avanzate
+    come NgRx per la gestione di stati globali e complessi. RxJS permette di gestire flussi di dati asincroni attraverso
+    observable, mentre NgRx fornisce una struttura simile a Redux per la gestione centralizzata dello stato, garantendo
+    una migliore prevedibilità e tracciabilità.
+
+    <ul class="list-disc ml-4">
+      <li><strong class="text-primary">RxJS</strong>: libreria di programmazione reattiva usata per gestire eventi
+        asincroni.
+      </li>
+
+      <li><strong class="text-primary">NgRx</strong>: libreria basata su <strong class="text-accent">Redux</strong> che
+        organizza lo stato globale dell'applicazione tramite azioni, riduttori e store.
+      </li>
+    </ul>
+  </div>
+
+  <code>{{codeExample}}</code>
+
+  <div class="flex flex-col gap-4">
+    <p>Questo esempio mostra la gestione dello stato locale con RxJS e uno stato globale con NgRx.</p>
+
+    <div class="flex w-full flex-col lg:flex-row gap-8">
+      <div class="flex-1">
+        <app-container-mask-mini>
+          <h2 class="text-2xl font-semibold">Stato Locale (Contatore)</h2>
+          <p class="text-xl">Contatore: {{ counter | async }}</p>
+
+          <div class="flex flex-row gap-8">
+            <button class="btn btn-outline btn-primary" (click)="incrementLocal()">Incrementa</button>
+            <button class="btn btn-outline btn-secondary" (click)="decrementLocal()">Decrementa</button>
+          </div>
+        </app-container-mask-mini>
+      </div>
+
+      <div class="divider lg:divider-horizontal">OR</div>
+
+      <div class="flex-1">
+        <app-container-mask-mini>
+          <h2 class="text-2xl font-semibold">Stato Globale (Contatore con NgRx)</h2>
+          <p class="text-xl">Contatore Globale: {{ globalCounter$ | async }}</p>
+
+          <div class="flex flex-row gap-8">
+            <button class="btn btn-outline btn-primary" (click)="incrementGlobal()">Incrementa</button>
+            <button class="btn btn-outline btn-secondary" (click)="decrementGlobal()">Decrementa</button>
+          </div>
+        </app-container-mask-mini>
+      </div>
+    </div>
+  </div>
+
+</app-container-mask>

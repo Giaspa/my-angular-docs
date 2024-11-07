@@ -1,0 +1,42 @@
+<app-container-mask>
+  <h1>Data Binding</h1>
+
+  <div description>Il <strong class="text-secondary">Data Binding</strong> in Angular è il processo che collega i dati
+    dal modello al template e viceversa. Angular offre diverse modalità di data binding:
+    <ul class="list-disc ml-4">
+      <li><strong class="text-primary">Interpolazione</strong> <strong class="ml-1 bg-primary text-white px-2">{{"{{
+          }}"}}</strong>: per mostrare i dati nel template.</li>
+
+      <li><strong class="text-primary">Property Binding</strong> <strong
+          class="ml-1 bg-primary text-white px-2">{{"[property]"}}</strong>: per passare dati dal modello agli attributi
+        del DOM.</li>
+
+      <li><strong class="text-primary">Event Binding</strong> <strong
+          class="ml-1 bg-primary text-white px-2">{{"(event)"}}</strong>: per rispondere a eventi dell'utente come click
+        e input.</li>
+
+      <li><strong class="text-primary">Two-way Binding</strong> <strong
+          class="ml-1 bg-primary text-white px-2">{{"[(ngModel)]"}}</strong>: per sincronizzare i dati tra il modello e
+        il template in modo bidirezionale.</li>
+    </ul>
+  </div>
+
+  <code>{{codeExample}}</code>
+
+  <div class="flex flex-col gap-4">
+    <p>Messaggio interpolato: <span class="text-amber-400">{{ message }}</span></p>
+
+    <p>Property Binding:</p>
+    <label class="input input-bordered flex items-center gap-2">
+      <input type="text" class="grow" [value]="message" readonly />
+    </label>
+
+    <p>Event Binding:</p>
+    <button class="btn btn-secondary ring ring-pink-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900" (click)="onButtonClick()">Clicca per aggiornare il messaggio</button>
+
+    <p>Two-way Binding:</p>
+    <label class="input input-bordered flex items-center gap-2">
+      <input type="text" class="grow" [(ngModel)]="message" />
+    </label>
+  </div>
+</app-container-mask>

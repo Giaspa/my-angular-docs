@@ -1,0 +1,19 @@
+<app-container-mask>
+  <h1>Change Detection</h1>
+
+  <p description>La <strong class="text-secondary">Change Detection</strong> in Angular è il meccanismo che rileva e
+    aggiorna automaticamente
+    il DOM dell'applicazione in risposta a modifiche nei dati. Angular utilizza una Change Detection automatica per
+    verificare periodicamente se i dati del modello hanno subito cambiamenti, ma puoi anche ottimizzare il rilevamento
+    impostando la strategia di rilevamento dei cambiamenti a <span class="text-white bg-black px-1">OnPush</span>.
+    Questo approccio consente di aggiornare il
+    componente solo quando cambiano i suoi input o un evento specifico innesca un aggiornamento.</p>
+
+  <code>{{exampleCode}}</code>
+
+  <div class="flex flex-col gap-8 items-center">
+    <p class="text-lg font-bold" [ngClass]="message === 'Iniziale' ? 'text-amber-400' : 'text-green-400'">{{ message }}
+    </p>
+    <button class="btn btn-outline btn-primary" (click)="changeMessage()">Change Message</button>
+  </div>
+</app-container-mask>

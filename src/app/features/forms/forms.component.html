@@ -1,0 +1,120 @@
+<app-container-mask>
+  <h1>Gestione dei Form in Angular</h1>
+
+  <div description>I <strong class="text-secondary">Forms </strong> in Angular sono uno strumento potente per la
+    gestione dei dati e delle interazioni utente. Angular offre due approcci principali:
+
+    <ul class="list-disc ml-4">
+      <li><strong class="text-primary">Template-driven Forms</strong>: ideali per form più semplici, dove la logica è
+        principalmente nel template. Sono facili da configurare e usano ngModel per il binding bidirezionale dei dati.
+      </li>
+
+      <li><strong class="text-primary">Reactive Forms</strong>: indicati per form complessi e dinamici, con la logica
+        dichiarata direttamente nel componente. Offrono un maggiore controllo e permettono di gestire in modo
+        programmatico validazioni, gruppi e array di controlli.
+      </li>
+    </ul>
+  </div>
+
+  <code>{{codeExample}}</code>
+
+  <div class="flex flex-col gap-4">
+    <p>Questa pagina mostra l'uso dei template-driven forms e dei reactive forms in Angular.</p>
+
+    <div class="flex w-full flex-col lg:flex-row gap-8">
+      <div class="flex-1">
+        <app-container-mask-mini>
+          <!-- Template-Driven Form -->
+          <h2 class="text-2xl font-semibold">Template-Driven Form</h2>
+          <form class="flex flex-col gap-4" #templateForm="ngForm" (ngSubmit)="onSubmitTemplateForm(templateForm)">
+            <label class="input input-bordered flex items-center gap-2">
+              Name:
+              <input type="text" class="grow" id="name" name="name" ngModel required />
+
+              <div class="label"
+                *ngIf="templateForm.controls['name']?.invalid && templateForm.controls['name']?.touched">
+                <span class="label-text-alt text-red-600">Il nome è richiesto.</span>
+              </div>
+            </label>
+
+            <label class="input input-bordered flex items-center gap-2 ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="h-4 w-4 opacity-70">
+                <path
+                  d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                <path
+                  d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+              </svg>
+              <input type="text" class="grow" placeholder="Email" id="email" name="email" ngModel required email />
+
+              <div class="label"
+                *ngIf="templateForm.controls['email']?.invalid && templateForm.controls['email']?.touched">
+                <span class="label-text-alt text-red-600">Inserisci un'e-mail valida.</span>
+              </div>
+            </label>
+
+            <button class="btn btn-outline btn-primary" type="submit" [disabled]="templateForm.invalid">Invia</button>
+          </form>
+
+          <div class="mockup-code" *ngIf="submittedTemplate">
+            <div class="px-8">
+              Form inviato con successo! Dati:
+
+              <pre>
+          <code>{{ templateFormData | json }}</code>
+        </pre>
+            </div>
+          </div>
+        </app-container-mask-mini>
+      </div>
+
+      <div class="divider lg:divider-horizontal">OR</div>
+
+      <div class="flex-1">
+        <app-container-mask-mini>
+          <!-- Reactive Form -->
+          <h2 class="text-2xl font-semibold">Reactive Form</h2>
+          <form class="flex flex-col gap-4" [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+            <label class="input input-bordered flex items-center gap-2">
+              Name:
+              <input type="text" class="grow" id="name" formControlName="name" />
+
+              <div class="label" *ngIf="reactiveForm.controls['name'].invalid && reactiveForm.controls['name'].touched">
+                <span class="label-text-alt text-red-600">Il nome è richiesto.</span>
+              </div>
+            </label>
+
+            <label class="input input-bordered flex items-center gap-2 ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="h-4 w-4 opacity-70">
+                <path
+                  d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                <path
+                  d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+              </svg>
+              <input type="text" class="grow" placeholder="Email" id="email" formControlName="email" />
+
+              <div class="label"
+                *ngIf="reactiveForm.controls['email']?.invalid && reactiveForm.controls['email']?.touched">
+                <span class="label-text-alt text-red-600">Inserisci un'e-mail valida.</span>
+              </div>
+            </label>
+
+            <button class="btn btn-outline btn-primary" type="submit" [disabled]="reactiveForm.invalid">Invia</button>
+          </form>
+
+          <div class="mockup-code" *ngIf="submittedReactive">
+            <div class="px-8">
+              Form inviato con successo! Dati:
+
+              <pre>
+          <code>{{ reactiveFormData | json }}</code>
+        </pre>
+            </div>
+          </div>
+        </app-container-mask-mini>
+      </div>
+    </div>
+  </div>
+
+</app-container-mask>
