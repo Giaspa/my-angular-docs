@@ -11,7 +11,7 @@ import { TestingComponent } from './features/testing/testing.component';
 import { PerformanceComponent } from './features/performance/performance.component';
 
 export const routes: Routes = [
-  { path: 'home', redirectTo: '/data-binding', pathMatch: 'full' },
+  { path: '', redirectTo: '/data-binding', pathMatch: 'full' },
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'change-detection', component: ChangeDetectionComponent },
   {
