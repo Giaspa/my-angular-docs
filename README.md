@@ -2,6 +2,11 @@
 
 Benvenuto in **My Angular Docs**, un progetto sviluppato con Angular 17 per esplorare e comprendere i concetti fondamentali di Angular attraverso esempi pratici e codice integrato.
 
+## 🌐 Accesso Online
+Puoi accedere al progetto live su GitHub Pages al seguente link:
+
+[My Angular Docs - GitHub Pages](https://giaspa.github.io/my-angular-docs)
+
 ## 🧑‍💻 Tech Stack
 
 - **Framework**: Angular 17  
