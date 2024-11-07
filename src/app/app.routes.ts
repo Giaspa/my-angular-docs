@@ -25,4 +25,5 @@ export const routes: Routes = [
   { path: 'forms', component: FormsComponent },
   { path: 'testing', component: TestingComponent },
   { path: 'performance', component: PerformanceComponent },
+  { path: '**', redirectTo: '/data-binding'},
 ];
