@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "deploy": "ng deploy --base-href=my-angular-docs",
-    "build": "ng build",
+    "deploy": "ng deploy",
+    "build": "ng build --configuration production --base-href /my-angular-docs/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-docs": "node dist/angular-docs/server/server.mjs"
