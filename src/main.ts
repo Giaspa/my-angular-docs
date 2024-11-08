@@ -1,14 +1,9 @@
-import { enableProdMode } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 import { provideStore } from '@ngrx/store';
 import { counterReducer } from './app/features/state-management/sm-utils/counter.reducer';
-
-// if (environment.production) {
-//   enableProdMode();
-// }
 
 bootstrapApplication(AppComponent, {
   providers: [
