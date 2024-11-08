@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - test-Google-Tag-Manager
+      - feature/*
   pull_request:
     branches:
       - main
