@@ -35,4 +35,5 @@ jobs:
           -Dsonar.projectKey=Giaspa_my-angular-docs \
           -Dsonar.organization=giaspa \
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+          -Dsonar.branch.name=${{ github.ref_name }}
