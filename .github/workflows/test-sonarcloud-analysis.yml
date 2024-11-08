@@ -22,11 +22,14 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'temurin'  # Specifica il tipo di distribuzione JDK (es. temurin)
+          distribution: 'temurin'
+
+      - name: Install SonarScanner
+        run: |
+          npm install -g sonar-scanner
 
       - name: Install dependencies
         run: |
-          # Aggiungi qui il comando per installare le dipendenze, ad esempio:
           npm install
 
       - name: SonarCloud Scan
