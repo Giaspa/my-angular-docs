@@ -4,11 +4,10 @@ on:
   push:
     branches:
       - main
-      - feature/*
+      - test-Google-Tag-Manager
   pull_request:
     branches:
       - main
-      - test-Google-Tag-Manager
 
 jobs:
   sonarcloud:
