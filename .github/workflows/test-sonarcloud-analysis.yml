@@ -22,6 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
+          distribution: 'temurin'  # Specifica il tipo di distribuzione JDK (es. temurin)
 
       - name: Install dependencies
         run: |
